@@ -10,7 +10,7 @@ def supermarket():
 
 @app.route('/compras')
 def comprar():
-    return render_template('compras.html')
+    return render_template('comprar.html')
 
     
 # Ejecutar la app

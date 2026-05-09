@@ -4,13 +4,22 @@ body {
     background-color: #0026ff;
 }
 
+.padre{
+    display: flex;
+    flex-wrap: 20;
+}
+
+
+
+
+
 .contenedor{
-    width: 100px;
+    width: px;
     /* . -top,botton 2.- right,left */
     margin: 70px auto;
     /* padin es la distancia del borde hacia adentro*/
     /* como solo es un valor se aplica para top,botton,right y left */
-    padding: 30px; ;
+    padding: 40px; ;
     background-color: #ffffff;
 }
 
@@ -36,9 +45,10 @@ input{
    border: none;
 }
 
-h2{
+a{
     position: absolute;
     top: 0%;
-    left: 100%;
-    text-align: center;
+    left: 60%;
+    text-align: left;
+    font-size: 30px;
 }

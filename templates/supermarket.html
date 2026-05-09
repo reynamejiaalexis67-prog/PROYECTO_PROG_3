@@ -6,42 +6,49 @@
   </head>
 
    <body>
-       <div class="contenedor">
-          <h1>Super market </h1>
-          <h2>
-               <a href="{{url_for('comprar')}}">🛒</a>
-          </h2>
+      <div class="padre">
          
-          <legend>manzanas </legend> 
+               <div class="contenedor">
+                  <h1>Super market </h1>
+                  <img src="{{url_for('static', filename='image/manzana.jpg')}}">
+                  <legend>manzanas </legend> 
+                  <label>existencias: 39</label>
+                  <button class="boton-formulario">Agregar </button> 
+                  
+                     <a href="{{url_for('comprar')}}">🛒</a>
+               </div>
+               
+                  <div class="contenedor">
+                  <img src="{{url_for('static', filename='image/platano.jpg')}}">
+                  <legend>platano</legend> 
+                  <label>existencias: 40</label>
+                  <button class="boton-formulario">Agregar </button> 
 
-          <input type="text">
-          <button class="boton-formulario">Aceptar </button> 
-           
-        </div>
-        
-         <div class="contenedor">
-          
-          <legend>platano</legend> 
-          <input type="text">
-          <button class="boton-formulario">Aceptar </button> 
+               </div>
 
-        </div>
+                  <div class="contenedor" >
+                  <img src="{{url_for('static', filename='image/piña.jpg')}}">
+                  <legend>piña</legend> 
+                  <label>existencias: 12</label>
+                  <button class="boton-formulario">Agregar </button> 
+                  
 
-         <div class="contenedor" >
-          
-          <legend>piña</legend> 
-          <input type="text">
-          <button class="boton-formulario">Aceptar </button> 
+               </div>
+                  <div class="contenedor">
+                  <img src="{{url_for('static', filename='image/pera.jpg')}}">
+                  <legend>pera</legend> 
+                  <label>existencias: 8</label>
+                  <button class="boton-formulario">Agregar </button> 
 
-        </div>
-         <div class="contenedor">
-          
-          <legend>pera</legend> 
-          <input type="text">
-          <button class="boton-formulario">Aceptar </button> 
+               </div>
+               
+                  
+               
+                  
+                  
+         </div>
+     </div>
 
-        </div>
-        
    </body>
 
 </html>
