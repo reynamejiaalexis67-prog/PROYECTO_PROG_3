@@ -1,0 +1,44 @@
+body {
+
+    font-family: Arial,sans-serif;
+    background-color: #0026ff;
+}
+
+.contenedor{
+    width: 100px;
+    /* . -top,botton 2.- right,left */
+    margin: 70px auto;
+    /* padin es la distancia del borde hacia adentro*/
+    /* como solo es un valor se aplica para top,botton,right y left */
+    padding: 30px; ;
+    background-color: #ffffff;
+}
+
+h1 {
+    position: absolute;
+    top: 0%;
+    left: 42.5%;
+    text-align: center;
+
+}
+
+input{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boton-formulario{
+   width: 100%;
+   background-color: #c2b1b1;
+   color: #000000;
+   padding: 8px;
+   margin-top: 7px;
+   border: none;
+}
+
+h2{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    text-align: center;
+}
