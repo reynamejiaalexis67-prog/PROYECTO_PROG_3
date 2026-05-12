@@ -52,3 +52,41 @@ a{
     text-align: left;
     font-size: 30px;
 }
+
+.caja {
+    width: 300px;
+    border: 2px solid black;
+    padding:10px ;
+}
+
+.fila{
+    display: flex;
+    justify-content: 
+    space-between;
+    margin:10px 0;
+}
+
+.cuadro {
+    width: 100 px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.conteiner { width: px;
+    /* . -top,botton 2.- right,left */
+    margin: 70px auto;
+    /* padin es la distancia del borde hacia adentro*/
+    /* como solo es un valor se aplica para top,botton,right y left */
+    padding: 40px; ;
+    background-color: #ffffff;
+}
+
+.contenedor2 {width: px;
+    /* . -top,botton 2.- right,left */
+    margin: 70px auto;
+    /* padin es la distancia del borde hacia adentro*/
+    /* como solo es un valor se aplica para top,botton,right y left */
+    padding: 40px; ;
+    background-color: #ffffff;
+
+}
