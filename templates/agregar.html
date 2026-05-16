@@ -10,10 +10,16 @@
           <h1>almacen</h1>
           <legend>ingresa el producto aqui</legend> 
           
-          <input type="text" placeholder="Tu nombre">
-
+          <input type="text" placeholder="Tu nombre" id="nombre" required>
+          <!--el one click sirtve que al momento de darle al boton muetre una alerta (para eso esta la alert en la linea 17) para que muetre el mensjae "(simulando que se agrego un producto)"-->
           <legend>ingresa el precio aqui </legend> 
-          
+          <input type="number" placeholder="EL precio" id="precio" required>
+          <button class="botones" onclick="alert('se agrego con exito')">Agregar</button>
+          <a href="{{url_for('supermarket')}}">Volver</a>
+
+        
+        </div>
+</html>
           <input type="text" placeholder="Tu nombre">
           <button class="boton-formulario">Aceptar</button> 
           
