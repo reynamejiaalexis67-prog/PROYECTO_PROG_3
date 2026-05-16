@@ -7,6 +7,9 @@
 <!--la clase padre nos funciona para agregar un flex para que
  las imagenes no salga una encima de la otra  -->
    <body>
+      <!--esta parte sirve para que lso botones tengan su propia parte en la pagina y no se combienen en uno solo o estorbe el contenido de la misma-->
+      <a href="{{url_for('agregar')}}" class="btn-nav btn-left">➕</a>
+      <a href="{{url_for('comprar')}}" class="btn-nav btn-right">🛒</a>
       <div class="padre">
       <!--el contenedor es el entorno que tiene al rededor nuestro producto -->
                <div class="contenedor">
@@ -15,9 +18,6 @@
                   <img src="{{url_for('static', filename='image/mokka.jpg')}}">
                   <legend>mokka </legend> 
                   <label>precio= 50</label>
-                  <button class="boton-formulario">Agregar </button> 
-                   
-                     <a href="{{url_for('comprar')}}">🛒</a>
                    
                </div>
                
