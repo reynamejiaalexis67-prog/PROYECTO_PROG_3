@@ -16,31 +16,36 @@
                   <h1>cafeteria la superior </h1>
                   <!--traemos una imagen traida desde la una carpeta llamada image en static-->
                   <img src="{{url_for('static', filename='image/mokka.jpg')}}">
-                  <legend>mokka </legend> 
-                  <label>precio= 50</label>
+                  <legend>Mokka (250ml)</legend> 
+                  <label>precio = 50</label>
+                  <p>Cantidad: <span id="contador">0</span></p>
+                  <button class="boton-formulario">Agregar </button> 
                    
                </div>
                
                   <div class="contenedor">
                   <img src="{{url_for('static', filename='image/croassant.jpg')}}">
-                  <legend>croassand</legend> 
-                  <label>precio= 25</label>
-                  <button class="boton-formulario">Agregar </button> 
+                  <legend>Croissant</legend> 
+                  <label>precio = 25</label>
+                  <p>Cantidad: <span id="contador">0</span></p>
+                  <button class="boton-formulario"> Agregar </button> 
 
                </div>
 
                   <div class="contenedor" >
                   <img src="{{url_for('static', filename='image/americano.jpg')}}">
-                  <legend>americano</legend> 
-                  <label>precio= 60</label>
+                  <legend>Americano (250ml)</legend> 
+                  <label>precio = 60</label>
+                  <p>Cantidad: <span id="contador">0</span></p>
                   <button class="boton-formulario">Agregar </button> 
                   
 
                </div>
                   <div class="contenedor">
                   <img src="{{url_for('static', filename='image/dona.jpg')}}">
-                  <legend>dona</legend> 
-                  <label>precio= 20</label>
+                  <legend>Dona</legend> 
+                  <label>precio = 20</label>
+                  <p>Cantidad: <span id="contador">0</span></p>
                   <button class="boton-formulario">Agregar </button> 
 
                </div>
