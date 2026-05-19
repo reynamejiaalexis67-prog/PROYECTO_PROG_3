@@ -1,62 +1,135 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-   <title>Super_market_el_Jisus_ </title>
-   <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
-  </head>
-<!--la clase padre nos funciona para agregar un flex para que
- las imagenes no salga una encima de la otra  -->
-   <body>
-      <!--esta parte sirve para que lso botones tengan su propia parte en la pagina y no se combienen en uno solo o estorbe el contenido de la misma-->
-      <a href="{{url_for('agregar')}}" class="btn-nav btn-left">➕</a>
-      <a href="{{url_for('comprar')}}" class="btn-nav btn-right">🛒</a>
-      <div class="padre">
-      <!--el contenedor es el entorno que tiene al rededor nuestro producto -->
-               <div class="contenedor">
-                  <h1>cafeteria la superior </h1>
-                  <!--traemos una imagen traida desde la una carpeta llamada image en static-->
-                  <img src="{{url_for('static', filename='image/mokka.jpg')}}">
-                  <legend>Mokka (250ml)</legend> 
-                  <label>precio = 50</label>
-                  <p>Cantidad: <span id="contador-mokka">0</span></p>
-                  <button class="boton-formulario">Agregar </button> 
-                   
-               </div>
-               
-                  <div class="contenedor">
-                  <img src="{{url_for('static', filename='image/croassant.jpg')}}">
-                  <legend>Croissant</legend> 
-                  <label>precio = 25</label>
-                  <p>Cantidad: <span id="contador-croassant">0</span></p>
-                  <button class="boton-formulario"> Agregar </button> 
 
-               </div>
+<head>
 
-                  <div class="contenedor" >
-                  <img src="{{url_for('static', filename='image/americano.jpg')}}">
-                  <legend>Americano (250ml)</legend> 
-                  <label>precio = 60</label>
-                  <p>Cantidad: <span id="contador-americano">0</span></p>
-                  <button class="boton-formulario">Agregar </button> 
-                  
+    <title>Super_market_el_Jisus_</title>
 
-               </div>
-                  <div class="contenedor">
-                  <img src="{{url_for('static', filename='image/dona.jpg')}}">
-                  <legend>Dona</legend> 
-                  <label>precio = 20</label>
-                  <p>Cantidad: <span id="contador-dona">0</span></p>
-                  <button class="boton-formulario">Agregar </button> 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
 
-               </div>
-               
-                  
-               
-                  
-                  
-         </div>
-     </div>
+</head>
 
-   </body>
+<!-- la clase padre nos funciona para agregar un flex -->
+<body>
+
+    <!-- botones superiores -->
+    <a href="{{url_for('agregar')}}" class="btn-nav btn-left">➕</a>
+
+    <a href="{{url_for('comprar')}}" class="btn-nav btn-right">🛒</a>
+
+
+    <div class="padre">
+
+
+        <!-- MOKKA -->
+        <div class="contenedor">
+
+            <h1>cafeteria la superior</h1>
+
+            <img src="{{url_for('static', filename='image/mokka.jpg')}}">
+
+            <legend>Mokka (250ml)</legend>
+
+            <label>precio = 50</label>
+
+            <p>Cantidad: <span id="contador-mokka">0</span></p>
+
+
+            <!-- boton conectado con flask -->
+            <a href="{{url_for('agregar_mokka')}}">
+
+                <button class="boton-formulario">
+
+                    Agregar
+
+                </button>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- CROISSANT -->
+        <div class="contenedor">
+
+            <img src="{{url_for('static', filename='image/croassant.jpg')}}">
+
+            <legend>Croissant</legend>
+
+            <label>precio = 25</label>
+
+            <p>Cantidad: <span id="contador-croassant">0</span></p>
+
+
+            <a href="{{url_for('agregar_croissant')}}">
+
+                <button class="boton-formulario">
+
+                    Agregar
+
+                </button>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- AMERICANO -->
+        <div class="contenedor">
+
+            <img src="{{url_for('static', filename='image/americano.jpg')}}">
+
+            <legend>Americano (250ml)</legend>
+
+            <label>precio = 60</label>
+
+            <p>Cantidad: <span id="contador-americano">0</span></p>
+
+
+            <a href="{{url_for('agregar_americano')}}">
+
+                <button class="boton-formulario">
+
+                    Agregar
+
+                </button>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- DONA -->
+        <div class="contenedor">
+
+            <img src="{{url_for('static', filename='image/dona.jpg')}}">
+
+            <legend>Dona</legend>
+
+            <label>precio = 20</label>
+
+            <p>Cantidad: <span id="contador-dona">0</span></p>
+
+
+            <a href="{{url_for('agregar_dona')}}">
+
+                <button class="boton-formulario">
+
+                    Agregar
+
+                </button>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</body>
 
 </html>

@@ -1,22 +1,76 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-   <title>Inicio</title>
-   <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
-  </head>
 
-   <body>
-       <div class="contenedor2">
-          <h1>almacen</h1>
-          <legend>ingresa el producto aqui</legend> 
-          
-          <input type="text" placeholder="Tu nombre" id="nombre" required>
-          <!--el one click sirtve que al momento de darle al boton muetre una alerta (para eso esta la alert en la linea 17) para que muetre el mensjae "(simulando que se agrego un producto)"-->
-          <legend>ingresa el precio aqui </legend> 
-          <input type="number" placeholder="EL precio" id="precio" required>
-          <button class="botones" onclick="alert('se agrego con exito')">Agregar</button>
-          <a href="{{url_for('supermarket')}}"class="btn-nav btn-right">Volver</a>
+<head>
 
-        </div>
+    <title>Inicio</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+
+</head>
+
+<body>
+
+    <div class="contenedor2">
+
+        <h1>almacen</h1>
+
+        <!-- formulario -->
+        <form action="{{url_for('guardar')}}" method="POST">
+
+            <legend>ingresa el producto aqui</legend>
+
+            <input 
+            type="text"
+            placeholder="el producto"
+            name="nombre"
+            required>
+
+
+            <legend>ingresa el precio aqui</legend>
+
+            <input
+            type="number"
+            placeholder="El precio"
+            name="precio"
+            required>
+
+
+            <!-- seleccion de categoria -->
+            <legend>selecciona categoria</legend>
+
+            <select name="categoria">
+
+                <option value="bebida">Bebida</option>
+
+                <option value="reposteria">REPOSTERIA</option>
+
+            </select>
+
+
+            <br><br>
+
+            <!-- boton -->
+            <button type="submit" class="botones">
+
+                Agregar
+
+            </button>
+
+        </form>
+
+
+        <br>
+
+        <a href="{{url_for('supermarket')}}" class="btn-nav btn-right">
+
+            Volver
+
+        </a>
+
+    </div>
+
+</body>
+
 </html>
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>

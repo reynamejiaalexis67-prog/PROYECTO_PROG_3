@@ -1,43 +1,62 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Área de compras </title>
+
+<head>
+
+    <title>area de compras</title>
+
     <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
-  </head>
-<!--conteiner es nuestro entorno en el que se imprimira lo que deseemos comprar -->
-  <body>
+
+</head>
+
+<body>
+
     <div class="conteiner">
-    <h3>lista de objetos  </h3>
-    <!--caja nos sirve  para crear el area en el que se escribira el producto -->
-             <div class="caja"></div>      
-              <!--fila es la separacion que tendran nuestros cajas -->
-              <div class="fila">
 
-              <div class="caja"></div>   
-              </div>
-             <div class="caja"></div>      
-              
-              <div class="fila">
+        <h1>lista de compras</h1>
 
-              <div class="caja"></div>   
-              </div>
-             <div class="caja"></div>      
-              
-              <div class="fila">
 
-              <div class="caja"></div>   
-              </div>
-             <div class="caja"></div>      
-              
-              <div class="fila">
-                
-              <div class="caja">0.16%</div>   
-              
-              </div>
-                  
-        
+        <!-- recorremos los productos -->
+        {% for producto in productos %}
 
-        <button type="submit" class="boton-formulario">comprar</button> 
-       </div>
-  </body>
+            <div class="caja">
+
+                <p>{{producto.nombre}}</p>
+
+                <p>precio: ${{producto.precio}}</p>
+
+            </div>
+
+            <br>
+
+        {% endfor %}
+
+
+        <!-- resultados -->
+        <div class="caja">
+
+            <p>subtotal: ${{subtotal}}</p>
+
+            <p>iva: ${{iva}}</p>
+
+            <p>descuento: ${{descuento}}</p>
+
+            <p>Total: ${{total}}</p>
+
+        </div>
+
+
+        <br>
+
+        <a href="{{url_for('supermarket')}}">
+
+            volver
+
+        </a>
+
+    </div>
+
+</body>
+
 </html>

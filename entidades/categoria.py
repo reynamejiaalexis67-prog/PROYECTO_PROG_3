@@ -2,5 +2,7 @@
 from enum import Enum
 
 class Categoria(Enum):
-    Bebida="bebida"
-    Reposteria="reposteria"
+
+    BEBIDA = "Bebida"
+
+    REPOSTERIA = "Reposteria"

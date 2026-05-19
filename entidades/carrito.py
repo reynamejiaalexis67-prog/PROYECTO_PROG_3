@@ -33,13 +33,20 @@ class Carrito:
         descuento = 0
         for producto in self.productos:
             # verificamos si el producto es reposteria
-            if producto.categoria == Categoria.Reposteria:
+            if producto.categoria == Categoria.REPOSTERIA:
                 descuento += producto.precio * 0.10
         return descuento
 
 
     # metodo para calcular el total final
+ # metodo para calcular total
     def calcular_total(self):
-        # Sumamos subtotal e IVA, y restamos el descuento de repostería
+
+        # si no hay productos
+        if len(self.productos) == 0:
+
+            return 0
+
         total = self.calcular_subtotal() + self.calcular_iva() - self.calcular_descuento()
+
         return total
